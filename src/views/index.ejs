@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<%- include("./layouts/head.ejs") -%>
+
+<body class="bg-light">
+<div class="container-fluid p-0">
+    <div class="row justify-content-center pt-4">
+        <div class="col-8 shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="d-flex bd-highlight mb-3">
+                <div class="mr-auto p-2 bd-highlight">
+                    <h2>Student List</h2>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <a href="/student/add">
+                        <button type="button" class="btn btn-primary">Add Student</button>
+                    </a>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="border-0 text-center">N.</th>
+                    <th class="border-0 text-center">Student name</th>
+                    <th class="border-0 text-center">StudentId</th>
+                    <th class="border-0 text-center">theoryScore</th>
+                    <th class="border-0 text-center">practiceScore</th>
+                    <th class="border-0 text-center">description</th>
+                    <th class="border-0 text-center">review</th>
+                    <th class="border-0 text-center">classId</th>
+                    <th class="border-0 text-center"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <% students.forEach((item,index)=> { %>
+                    <tr>
+                        <td><%- index+1 %></td>
+                        <td>
+                            <a href="/student/detail/<%- item._id %>"><%- item.name %></a>
+                        </td>
+                        <td><%- item.studentId %></td>
+                        <td><%- item.theoryScore %></td>
+                        <td><%- item.practiceScore %></td>
+                        <td><%- item.description %></td>
+                        <td><%- item.review %></td>
+                        <td><%- item.classId %></td>
+                        <td><a href="/student/update/<%- item._id %>" class="btn btn-primary">Update</a></td>
+                        <td><a href="/student/delete/<%- item._id %>" class="btn btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this employee')">Delete</a>
+                        </td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include("./layouts/script.ejs") -%>
+</body>
+</html>

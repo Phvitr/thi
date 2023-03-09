@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<%- include("./layouts/head.ejs") -%>
+
+<body class="bg-light">
+<div class="container-fluid">
+    <nav></nav>
+    <div class="row justify-content-center pt-4">
+        <div class="col-6 shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="d-flex bd-highlight mb-3">
+                <div class="mr-auto p-2 bd-highlight">
+                    <h2>Student Information</h2>
+                </div>
+            </div>
+            <table class="table  table-borderless">
+                <tr>
+                    <th>Student name:</th>
+                    <td>
+                        <%- student.name %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>StudentId:</th>
+                    <td>
+                        <%- student.studentId %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>theoryScore:</th>
+                    <td>
+                        <%- student.theoryScore %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>practiceScore:</th>
+                    <td>
+                        <%- student.practiceScore %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>description:</th>
+                    <td>
+                        <%- student.description %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>review:</th>
+                    <td>
+                        <%- student.review %>
+                    </td>
+                </tr>
+                <tr>
+                    <th>classId:</th>
+                    <td>
+                        <%- student.classId %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/student">Back to student list</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<%- include("./layouts/script.ejs") -%>
+</body>
+</html>
