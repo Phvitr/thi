@@ -23,11 +23,11 @@
                 </div>
                 <div class="form-group">
                     <label for="theoryScore">theoryScore</label>
-                    <input type="text" id="theoryScore" name="theoryScore" value="<%- student.theoryScore %>" class="form-control">
+                    <input type="number" id="theoryScore" name="theoryScore" value="<%- student.theoryScore %>" class="form-control" min="0" max="100" >
                 </div>
                 <div class="form-group">
                     <label for="practiceScore">practiceScore</label>
-                    <input type="text" id="practiceScore" name="practiceScore" value="<%- student.practiceScore %>" class="form-control">
+                    <input type="number" id="practiceScore" name="practiceScore" value="<%- student.practiceScore %>" class="form-control" min="0" max="100">
                 </div>
                 <div class="form-group">
                     <label for="description">description</label>
